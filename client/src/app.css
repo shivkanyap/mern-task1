@@ -1,0 +1,15 @@
+
+.floatright {
+  float: right;
+}
+.floatleft {
+  float: left;
+}
+
+.navitems1 {
+  display: flex;
+}
+
+.logout {
+  padding-left: 400px;
+}

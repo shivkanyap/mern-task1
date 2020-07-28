@@ -1,0 +1,33 @@
+.formcenter {
+    margin-top: 20px;
+}
+.formheader {
+    color: grey;
+    margin-top: 45px;
+    text-align: left;
+}
+.border {
+    align-content: center;
+}
+
+.headerlabel {
+    color:blue;
+    text-align: left;
+}
+.submit {
+    align-items: center;
+}
+
+.dropdownspace {
+    margin: 0px 13px 0 37px;
+} 
+
+.register {
+    margin: 0 0 22px 0;
+}
+.actiontext {
+    text-align: center;
+}
+.bracketsize {
+    font-size: 12px;
+}

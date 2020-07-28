@@ -1,0 +1,13 @@
+.messagewindow {
+    margin-top: 10px;
+    width: 50%;
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: lightblue;
+    border: solid;
+}
+
+.window {
+    color: red;
+}
