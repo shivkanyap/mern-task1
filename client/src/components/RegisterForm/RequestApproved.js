@@ -13,7 +13,7 @@ class RequestApproved extends React.Component
     }
 
     componentDidMount(){
-        axios.get('/requestform/view',{
+        axios.get('http://localhost:3005/requestform/view',{
             headers:{
                 'x-auth':localStorage.getItem('token')
             }

@@ -77,7 +77,7 @@ class App extends React.Component{
           <Route path='/requestform/rejected' component={RequestRejected} />
           <Route path='/notification' component={MsgWindow} />
           <Route path="/users/logout" render={(props) => {
-              axios.delete('/users/logout', {
+              axios.delete('http://localhost:3005/users/logout', {
                 headers: {
                   'x-auth': localStorage.getItem('token')
                 }

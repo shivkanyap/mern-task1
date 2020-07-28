@@ -34,7 +34,7 @@ class RequestForm extends React.Component
         }
     }
     componentDidMount(){
-        axios.get('/department/allDepartments',{
+        axios.get('http://localhost:3005/department/allDepartments',{
             headers:{
                 'x-auth':localStorage.getItem('token')
             }
@@ -47,7 +47,7 @@ class RequestForm extends React.Component
             }))
         })
 
-        axios.get('/users/allUsers',{
+        axios.get('http://localhost:3005/users/allUsers',{
             headers:{
                 'x-auth':localStorage.getItem('token')
             }
@@ -59,7 +59,7 @@ class RequestForm extends React.Component
               
             }))
         })
-        axios.get('/users/loggedinuser',{
+        axios.get('http://localhost:3005/users/loggedinuser',{
             headers:{
                 'x-auth':localStorage.getItem('token')
             }
@@ -90,7 +90,7 @@ class RequestForm extends React.Component
             msg: `form created by ${this.state.loggedInUser.username}`,
             userid:this.state.loggedInUser._id
         };
-        axios.post(`/requestform/create`,formData,{
+        axios.post(`http://localhost:3005/requestform/create`,formData,{
         
             headers:{
                 'x-auth':localStorage.getItem('token')
@@ -106,7 +106,7 @@ class RequestForm extends React.Component
                     this.props.history.push("/requestform/pending");
                  }, 5000);
             }
-            axios.post(`/notification/create`, msgData, {
+            axios.post(`http://localhost:3005/notification/create`, msgData, {
                 headers: {
                     'x-auth': localStorage.getItem('token')
                 }

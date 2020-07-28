@@ -14,7 +14,7 @@ const MsgWindow = () => {
   const getNotifications = () => {
     setLoading(true);
     axios
-      .get('/notification/all', {
+      .get('http://localhost:3005/notification/all', {
         headers: {
           'x-auth': localStorage.getItem('token')
         }

@@ -14,7 +14,7 @@ class ForApproval extends React.Component
         }
     }
     componentDidMount(){
-        axios.get('/requestform/view/pendingapproval',{
+        axios.get('http://localhost:3005/requestform/view/pendingapproval',{
             headers:{
                 'x-auth':localStorage.getItem('token')
             }
@@ -37,7 +37,7 @@ class ForApproval extends React.Component
                 msg: `form approved by ${username} `,
                 userid:userid
             };
-            axios.put(`/requestform/edit/${id}`,updateData, {
+            axios.put(`http://localhost:3005/requestform/edit/${id}`,updateData, {
                 headers: {
                     'x-auth' : localStorage.getItem('token')
                 }
@@ -52,7 +52,7 @@ class ForApproval extends React.Component
                   }
                   // post api call to notification id & msg
             });
-            axios.post(`/notification/create`, msgData, {
+            axios.post(`http://localhost:3005/notification/create`, msgData, {
                 headers: {
                     'x-auth': localStorage.getItem('token')
                 }
@@ -72,7 +72,7 @@ class ForApproval extends React.Component
                 msg: `form rejected by ${username} `,
                 userid:userid
               };
-            axios.put(`/requestform/edit/${id}`,updateData, {
+            axios.put(`http://localhost:3005/requestform/edit/${id}`,updateData, {
                 headers: {
                     'x-auth' : localStorage.getItem('token')
                 }
@@ -87,7 +87,7 @@ class ForApproval extends React.Component
                 }
                   // post api call to notification id & msg
             });
-            axios.post(`/notification/create`, msgData, {
+            axios.post(`http://localhost:3005/notification/create`, msgData, {
                 headers: {
                     'x-auth': localStorage.getItem('token')
                 }

@@ -20,7 +20,7 @@ class Login extends React.Component {
             password: this.state.password
         }
 
-    axios.post('/users/login', formData)
+    axios.post('http://localhost:3005/users/login', formData)
     .then(response => {
         if (response.data.errors) {
             this.setState(() => ({

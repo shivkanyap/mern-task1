@@ -17,7 +17,7 @@ class Register extends React.Component {
     }
 
     componentDidMount() {
-    axios.get('/department/allDepartments')
+    axios.get('http://localhost:3005/department/allDepartments')
     .then((response)=>{
     
         this.setState(()=>({
@@ -43,7 +43,7 @@ class Register extends React.Component {
         department:this.state.department
     }
     if(this.state.password===this.state.conformpassword) {
-        axios.post('/users/register', formData)
+        axios.post('http://localhost:3005/users/register', formData)
         .then(response => {
             if(response.data.errors) {
                 this.setState(() => ({
