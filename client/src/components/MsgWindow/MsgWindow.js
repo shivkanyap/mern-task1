@@ -7,7 +7,7 @@ const MsgWindow = () => {
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => !isLoading && getNotifications(),2000);
+    const interval = setInterval(() => !isLoading && getNotifications(),3000);
     return () => clearInterval(interval);
   }, []);
 
