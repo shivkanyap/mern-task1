@@ -165,7 +165,7 @@ class ForApproval extends React.Component
                 <td>  
                     <ToastContainer />
                     <button className="btn btn-primary btn-sm pd-1 mr-2" onClick={()=>this.handleApprove(form._id,form.assignedUser.username,form.assignedUser._id)}>Approve</button>
-                    <button  className="btn btn-danger btn-sm pd-1 ml-2" onClick={()=>{this.handleReject(form._id,form.assignedUser.username,form.assignedUser._id ); return this.notifyReject();}}>Rejected</button>
+                    <button  className="btn btn-danger btn-sm pd-1 ml-2" onClick={()=>{this.handleReject(form._id,form.assignedUser.username,form.assignedUser._id ); return this.notifyReject();}}>Reject</button>
                 </td>
 
                </tr>
